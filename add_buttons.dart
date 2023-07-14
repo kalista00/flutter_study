@@ -22,7 +22,7 @@ class App extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color.fromRGBO(0, 0, 0, 0.8),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.
               start,
@@ -80,6 +80,8 @@ class App extends StatelessWidget {
                 ),
                 SizedBox(height: 30,),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.
+                  spaceBetween, //같은 row에 있는 버튼 멀어지게함
                   children: [
                     Container(
                       decoration: BoxDecoration(
@@ -95,6 +97,25 @@ class App extends StatelessWidget {
                           'Transfer',
                           style: TextStyle(
                             fontSize: 22,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF1F2123),
+                        borderRadius: BorderRadius.circular(45), //둥글게만들기
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 20,
+                          horizontal: 50,
+                        ),
+                        child: Text(
+                          'Request',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
                           ),
                         ),
                       ),
