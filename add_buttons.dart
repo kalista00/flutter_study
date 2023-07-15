@@ -1,3 +1,4 @@
+import 'package:contact/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class Player {
@@ -20,10 +21,10 @@ class App extends StatelessWidget {
     print(playerName);
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color.fromRGBO(0, 0, 0, 0.8),
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
+          backgroundColor: Color.fromRGBO(0, 0, 0, 0.8),
+          body: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.
               start,
               children: [
@@ -31,41 +32,41 @@ class App extends StatelessWidget {
                   height: 80,
                 ),
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Column(
-                          crossAxisAlignment:
-                          CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                                'Hello, World23!',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w800, //굵기
-                                ),
-                            ),
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Column(
+                      crossAxisAlignment:
+                      CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Hello, World23!',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 28,
+                            fontWeight: FontWeight.w800, //굵기
+                          ),
+                        ),
 
-                            Text(
-                                'Welcome back',
-                                style: TextStyle(
-                                  color: Colors.yellow.withOpacity(0.5), //투명도
-                                  fontSize: 14,
-                                ),
-                            ),
-                          ],
-                      ),
-                    ],
+                        Text(
+                          'Welcome back',
+                          style: TextStyle(
+                            color: Colors.yellow.withOpacity(0.5), //투명도
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 120,
                 ),
                 Text(
-                  'Total Balance',
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.white.withOpacity(0.8),
-                  )
+                    'Total Balance',
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white.withOpacity(0.8),
+                    )
                 ),
                 SizedBox(
                   height: 5,
@@ -82,49 +83,18 @@ class App extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.
                   spaceBetween, //같은 row에 있는 버튼 멀어지게함
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(45), //둥글게만들기
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          'Transfer',
-                          style: TextStyle(
-                            fontSize: 22,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF1F2123),
-                        borderRadius: BorderRadius.circular(45), //둥글게만들기
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          'Request',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
-                    ),
+                  children : const[
+                    Button(text: 'Transfer',
+                    bgColor: Color(0xFFF1B33B),
+                    textColor: Colors.black),
+                    Button(text: 'Request',
+                    bgColor: Colors.black,
+                    textColor: Colors.white,),
                   ],
                 ),
               ],
-          ),
-        )
+            ),
+          )
       ),
     );
   }
